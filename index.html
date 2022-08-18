@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Formulário</title>
+</head>
+<body>
+    <header>
+        <div class="flex">
+            <div class="img_wow">
+            </div>
+            <div class="logo">
+            </div>
+        </div>
+            <div class="align">
+                    <span class="home button-style">HOME</span>
+                <p class="blink">Bem vindo!</p>
+                <div class="selection">
+                    <span class="nacional-">CADASTRO</span>
+                </div>
+            </div>
+    </header>
+    <main>
+            <div class="sections">
+                <section class="info">
+                    
+                    <div class="img"></div>
+                    <div class="info-area">
+                        <div class="info1"></div>
+                        <div class="info2"></div>
+                    </div>
+                </section>
+                <section class="nacional">
+                    <section class="left-side">
+
+                    </section>
+                    <section class="right-side">
+                        <div class="img_battle">
+                        </div>
+                            <form method="POST" action="cadastro.php" class="b7validator">
+                                <label>
+                                    Seu nome:<br/>
+                                    <input type="text" name="name" data-rules="required|min=2" />
+                                </label>
+                                <label>
+                                    Seu e-mail:<br/>
+                                    <input type="text" name="email" data-rules="required|email" />
+                                </label>
+                                <label>
+                                    Sua senha:<br/>
+                                    <input type="password" name="password" data-rules="min=4" />
+                                </label>
+                                <label>
+                                    <input class="submit" type="submit" value="Cadastrar" />
+                                </label>
+                            </form>
+                    </section>
+                </section>
+            </div>
+    </main>
+
+    <script>
+document.querySelector(".align .home").addEventListener ("click", home);
+function home() {
+
+        document.querySelector(".align .home").classList.add("button-style");
+    document.querySelector(".align .selection .nacional-").classList.remove("button-style");
+        document.querySelector("main").style.marginLeft ="0vw";
+
+    /*document.querySelector(".align .selection .nacional-").style.background="none";
+    document.querySelector(".align .selection .importado-").style.background="none";
+    document.querySelector(".align .selection .hana").style.background="none";*/
+
+
+
+}
+
+
+
+document.querySelector(".align .selection .nacional-").addEventListener ("click", nextOne);
+function nextOne() {
+    document.querySelector(".align .selection .nacional-").classList.add("button-style");
+    document.querySelector(".align .home").classList.remove("button-style");
+    document.querySelector("main").style.marginLeft ="-100vw";
+
+    /*document.querySelector(".align .home").style.background="none";
+    document.querySelector(".align .selection .importado-").style.background="none";
+    document.querySelector(".align .selection .hana").style.background="none";*/
+}
+
+
+
+
+    </script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
